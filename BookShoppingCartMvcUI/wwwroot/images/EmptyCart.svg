@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Shopping Cart -->
+    <path d="M280 140H160L140 80H300L280 140Z" fill="#E5E7EB"/>
+    <path d="M140 80L160 140L180 200H260L280 140L300 80H140Z" stroke="#4F46E5" stroke-width="8" stroke-linejoin="round"/>
+    <circle cx="180" cy="240" r="20" stroke="#6B7280" stroke-width="8"/>
+    <circle cx="260" cy="240" r="20" stroke="#6B7280" stroke-width="8"/>
+    
+    <!-- Empty State Lines -->
+    <rect x="100" y="100" width="40" height="8" rx="4" fill="#E5E7EB"/>
+    <rect x="80" y="120" width="60" height="8" rx="4" fill="#E5E7EB"/>
+    <rect x="120" y="140" width="40" height="8" rx="4" fill="#E5E7EB"/>
+    
+    <!-- Empty State Lines (Right) -->
+    <rect x="280" y="100" width="40" height="8" rx="4" fill="#E5E7EB"/>
+    <rect x="260" y="120" width="60" height="8" rx="4" fill="#E5E7EB"/>
+    <rect x="300" y="140" width="40" height="8" rx="4" fill="#E5E7EB"/>
+</svg> 

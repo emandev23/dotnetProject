@@ -1,0 +1,26 @@
+/* Sticky footer styles */
+.footer {
+    margin-top: auto !important;
+}
+
+/* Footer link styles */
+.footer-link {
+    color: #6B7280;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #4F46E5;
+    text-decoration: none;
+}
+
+/* Ensure main content takes available space */
+main {
+    flex: 1 0 auto;
+}
+
+/* Minimum height for content area */
+.container {
+    min-height: 50vh;
+} 

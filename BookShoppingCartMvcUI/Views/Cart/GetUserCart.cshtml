@@ -3,67 +3,85 @@
     ViewData["Title"] = "GetUserCart";
 }
 
-<div style="width:90%;margin:auto" class="mt-2">
+<div class="container py-4">
     @if (Model != null && Model.CartDetails != null && Model.CartDetails.Count > 0)
     {
-        <h5>My Cart</h5>
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h4 class="mb-4" style="color: #4F46E5;">My Cart</h4>
 
-        <table class="table table-striped">
-            <tr>
-                <th>Book</th>
-                <th>Image</th>
-                <th>Genre</th>
-                <th>Unit Price(INR)</th>
-                <th>Total Price</th>
-                <th>Action</th>
-            </tr>
-            @foreach (var item in Model.CartDetails)
-            {
-                <tr>
-                    <td>@item.Book.BookName</td>
-                    <td>
-                        @if (string.IsNullOrEmpty(item.Book.Image))
-                        {
-                            <img src="/images/NoImage.png" style="width:80px;height:100px" />
-                        }
-                        else
-                        {
-                            <img src="/images/@item.Book.Image" style="width:80px;height:100px" />
-                        }
-                    </td>
-                    <td>@item.Book.Genre.GenreName</td>
-                    <td>@item.Book.Price X @item.Quantity</td>
-                    <td>@(item.Book.Price * item.Quantity)</td>
-                    <td>
-                        @* Increase Quantity button should be invisible if not enough stock*@
-                        @if (item.Quantity < item.Book.Stock.Quantity)
-                        {
-                            <a class="btn btn-info" href="/Cart/AddItem?bookId=@item.BookId&&redirect=1">+</a>
-                        }
-                        else
-                        {
-                            <span style="border: 1px solid;padding: 8px 8px;color: red;border-radius: 5px;margin-right:4px">Out of stock </span>
-                        }
-                        @* Decrement button *@
-                        <a class="btn btn-info" href="/cart/removeitem?bookid=@item.BookId">-</a>
-                    </td>
-                </tr>
-            }
-        </table>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Book</th>
+                                <th>Image</th>
+                                <th>Genre</th>
+                                <th>Unit Price (MAD)</th>
+                                <th>Total Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.CartDetails)
+                            {
+                                <tr>
+                                    <td class="align-middle">@item.Book.BookName</td>
+                                    <td>
+                                        @if (string.IsNullOrEmpty(item.Book.Image))
+                                        {
+                                            <img src="/images/NoImage.svg" style="width:80px;height:100px;object-fit:contain;background-color:#F3F4F6" alt="No book cover available" />
+                                        }
+                                        else
+                                        {
+                                            <img src="/images/@item.Book.Image" style="width:80px;height:100px;object-fit:cover" />
+                                        }
+                                    </td>
+                                    <td class="align-middle">@item.Book.Genre.GenreName</td>
+                                    <td class="align-middle">@item.Book.Price.ToString("F2") × @item.Quantity</td>
+                                    <td class="align-middle">@((item.Book.Price * item.Quantity).ToString("F2"))</td>
+                                    <td class="align-middle">
+                                        <div class="d-flex gap-2 align-items-center">
+                                            @if (item.Quantity < item.Book.Stock.Quantity)
+                                            {
+                                                <a class="btn btn-sm btn-primary" href="/Cart/AddItem?bookId=@item.BookId&&redirect=1">
+                                                    <i class="bi bi-plus"></i>
+                                                </a>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge bg-danger">Out of stock</span>
+                                            }
+                                            <a class="btn btn-sm btn-outline-danger" href="/cart/removeitem?bookid=@item.BookId">
+                                                <i class="bi bi-dash"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
 
-        <div class="my-2">
-            <h5>Total(INR): </h5>
-            @(Model.CartDetails.Select(item => item.Book.Price * item.Quantity).Sum())
+                <div class="d-flex justify-content-between align-items-center mt-4 pt-3 border-top">
+                    <h5 class="mb-0">Total: <span class="text-primary">MAD @(Model.CartDetails.Select(item => item.Book.Price * item.Quantity).Sum().ToString("F2"))</span></h5>
+                    <a class="btn btn-primary" href="/Cart/Checkout">
+                        <i class="bi bi-credit-card me-2"></i>Proceed to Checkout
+                    </a>
+                </div>
+            </div>
         </div>
-
-        <div class="my-2">
-            <a class="btn btn-primary" href="/Cart/Checkout">Checkout</a>
-        </div>
-
     }
     else
     {
-        <h5>Cart is empty</h5>
+        <div class="text-center py-5">
+            <img src="/images/EmptyCart.svg" alt="Your cart is empty" style="max-width: 400px; width: 100%; height: auto;" class="mb-4" />
+            <h4 class="mb-3" style="color: #4F46E5;">Your Cart is Empty</h4>
+            <p class="text-muted mb-4">Looks like you haven't added anything to your cart yet.</p>
+            <a href="/Home/Index" class="btn btn-primary">
+                <i class="bi bi-shop me-2"></i>Start Shopping
+            </a>
+        </div>
     }
 </div>
 

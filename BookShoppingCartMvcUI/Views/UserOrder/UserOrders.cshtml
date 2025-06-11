@@ -28,15 +28,14 @@
                                         Total:
                                     </td>
                                     <td>
-                                        @(order.OrderDetail.Select(item => item.Book.Price * item.Quantity).Sum())
-
+                                        @(order.OrderDetail.Select(item => item.Book.Price * item.Quantity).Sum().ToString("F2"))
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>Book</th>
                                     <th>Image</th>
                                     <th>Genre</th>
-                                    <th>Unit Price(INR)</th>
+                                    <th>Unit Price (MAD)</th>
                                     <th>Total Price</th>
                                 </tr>
                                 @foreach (var item in order.OrderDetail)
@@ -46,7 +45,7 @@
                                         <td>
                                             @if (string.IsNullOrEmpty(item.Book.Image))
                                             {
-                                                <img src="/images/NoImage.png" style="width:80px;height:100px" />
+                                                <img src="/images/NoImage.svg" style="width:80px;height:100px;object-fit:contain;background-color:#F3F4F6" alt="No book cover available" />
                                             }
                                             else
                                             {
@@ -54,8 +53,8 @@
                                             }
                                         </td>
                                         <td>@item.Book.Genre.GenreName</td>
-                                        <td>@item.Book.Price X @item.Quantity</td>
-                                        <td> @(item.Book.Price * item.Quantity) </td>
+                                        <td>@item.Book.Price.ToString("F2") X @item.Quantity</td>
+                                        <td> @((item.Book.Price * item.Quantity).ToString("F2")) </td>
                                     </tr>
                                 }
                             </table>

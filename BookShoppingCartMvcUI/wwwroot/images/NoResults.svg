@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Elements -->
+    <path d="M200 280c88.37 0 160-5.37 160-12s-71.63-12-160-12-160 5.37-160 12 71.63 12 160 12z" fill="#F3F4F6"/>
+    
+    <!-- Magnifying Glass -->
+    <g transform="translate(160, 80)">
+        <!-- Glass -->
+        <circle cx="40" cy="40" r="35" stroke="#4F46E5" stroke-width="10" fill="none" opacity="0.2"/>
+        <circle cx="40" cy="40" r="35" stroke="#4F46E5" stroke-width="10" fill="none" stroke-dasharray="219.8" stroke-dashoffset="120"/>
+        <!-- Handle -->
+        <line x1="65" y1="65" x2="90" y2="90" stroke="#4F46E5" stroke-width="10" stroke-linecap="round"/>
+        
+        <!-- Cross (X) -->
+        <g transform="translate(20, 20)" stroke="#6B7280" stroke-width="6" stroke-linecap="round">
+            <line x1="40" y1="0" x2="0" y2="40"/>
+            <line x1="0" y1="0" x2="40" y2="40"/>
+        </g>
+    </g>
+    
+    <!-- Text -->
+    <text x="200" y="220" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#6B7280" font-weight="500">No results found</text>
+    <text x="200" y="245" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#9CA3AF">Try adjusting your search criteria</text>
+</svg> 

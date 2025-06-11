@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240" height="300" viewBox="0 0 240 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="240" height="300" rx="8" fill="#F3F4F6"/>
+    
+    <!-- Book icon -->
+    <g transform="translate(70,90)">
+        <!-- Book cover -->
+        <path d="M100 20v100c0 5.523-4.477 10-10 10H10c-5.523 0-10-4.477-10-10V20c0-5.523 4.477-10 10-10h80c5.523 0 10 4.477 10 10z" fill="#E5E7EB"/>
+        <!-- Book spine -->
+        <path d="M90 10H10c-5.523 0-10 4.477-10 10v100c0 5.523 4.477 10 10 10h80c5.523 0 10-4.477 10-10V20c0-5.523-4.477-10-10-10zM10 110V20h80v90H10z" fill="#D1D5DB"/>
+        <!-- Book pages -->
+        <path d="M80 30H20v60h60V30z" fill="#F9FAFB"/>
+        <!-- Text lines -->
+        <rect x="30" y="45" width="40" height="4" rx="2" fill="#9CA3AF"/>
+        <rect x="30" y="55" width="30" height="4" rx="2" fill="#9CA3AF"/>
+        <rect x="30" y="65" width="35" height="4" rx="2" fill="#9CA3AF"/>
+    </g>
+    
+    <!-- Text -->
+    <text x="120" y="240" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#6B7280">No Image Available</text>
+</svg> 

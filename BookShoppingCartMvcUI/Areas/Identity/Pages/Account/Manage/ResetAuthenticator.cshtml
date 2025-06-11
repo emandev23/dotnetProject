@@ -3,6 +3,9 @@
 @{
     ViewData["Title"] = "Reset authenticator key";
     ViewData["ActivePage"] = ManageNavPages.TwoFactorAuthentication;
+    
+    // Redirect to TwoFactorAuthentication page
+    Response.Redirect("/Identity/Account/Manage/TwoFactorAuthentication");
 }
 
 <partial name="_StatusMessage" for="StatusMessage" />
