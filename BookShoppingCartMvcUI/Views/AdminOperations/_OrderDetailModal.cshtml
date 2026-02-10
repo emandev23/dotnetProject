@@ -12,7 +12,7 @@
                     <tr>
                         <th>Book</th>
                         <th>Genre</th>
-                        <th>Price</th>
+                        <th>Price (MAD)</th>
                         <th>Quantiy</th>
                         <th>TotalPrice</th>
                     </tr>
@@ -21,9 +21,9 @@
                         <tr>
                             <td>@item.Book.BookName</td>
                             <td>@item.Book.Genre.GenreName</td>
-                            <td>@item.UnitPrice</td>
+                            <td>MAD @item.UnitPrice.ToString("F2")</td>
                             <td>@item.Quantity</td>
-                            <td>@(item.Quantity * item.UnitPrice)</td>
+                            <td>MAD @((item.Quantity * item.UnitPrice).ToString("F2"))</td>
                         </tr>
                     }
                 </table>

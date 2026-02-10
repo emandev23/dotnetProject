@@ -1,0 +1,73 @@
+EBookStore Presentation - Detailed Content
+
+=== Slide 1: Title Page (30 sec) ===
+Title: EBookStore - Your Digital Bookstore
+Subtitle: A Modern E-commerce Web Application
+Team: [Team Members Names]
+Date: [Presentation Date]
+
+=== Slide 2: Project Overview (1 min) ===
+• Introduction to EBookStore
+  - An online book selling platform
+  - Complete solution for book enthusiasts
+• Main Objectives
+  - Simplify book purchasing
+  - Provide intuitive user experience
+  - Efficiently manage book inventory
+
+=== Slide 3: Key Features (2 min) ===
+For Customers:
+• Browse catalog by genre
+• Book search functionality
+• Shopping cart management
+• Streamlined checkout process
+• Order history
+
+For Administrators:
+• Complete book management (CRUD)
+• Stock management
+• Order tracking
+• Book genre management
+
+=== Slide 4: Technical Architecture (2 min) ===
+• Technologies Used:
+  - ASP.NET Core MVC (.NET 8)
+  - Entity Framework Core
+  - MySQL Database
+  - Bootstrap 5 for UI
+  - Identity for Authentication
+
+• Architecture:
+  - MVC Pattern
+  - Repository Pattern
+  - Dependency Injection
+
+=== Slide 5: User Interface (2 min) ===
+• Modern and Responsive Design
+  - Color palette: #4F46E5 (Indigo) and #6B7280 (Gray)
+  - Responsive layout for all screens
+• Intuitive Navigation
+  - Clear main menu
+  - Efficient search filters
+  - Accessible shopping cart
+
+=== Slide 6: Live Demonstration (5 min) ===
+Demo Scenario:
+1. User login
+2. Browsing the catalog
+3. Adding books to cart
+4. Checkout process
+5. Admin access
+6. Book and stock management
+
+=== Slide 7: Conclusion (30 sec) ===
+• Recap of key strengths
+• Future development plans
+• Questions and answers
+
+Presentation Notes:
+- Total duration: 13 minutes
+- Allow 2-3 minutes for questions
+- Prepare backup screenshots
+- Check internet connection before demo
+- Have a test account ready for demonstration 

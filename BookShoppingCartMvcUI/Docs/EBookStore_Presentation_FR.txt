@@ -1,0 +1,67 @@
+Présentation EBookStore - Contenu Détaillé
+
+=== Slide 1: Page de Titre (30 sec) ===
+Titre: EBookStore - Votre Librairie Numérique
+Sous-titre: Une Application Web E-commerce Moderne
+Équipe: [Noms des membres de l'équipe]
+Date: [Date de présentation]
+
+=== Slide 2: Vue d'Ensemble du Projet (1 min) ===
+• Introduction à EBookStore
+  - Une plateforme de vente de livres en ligne
+  - Solution complète pour les amateurs de lecture
+• Objectifs principaux
+  - Simplifier l'achat de livres
+  - Offrir une expérience utilisateur intuitive
+  - Gérer efficacement l'inventaire des livres
+
+=== Slide 3: Caractéristiques Principales (2 min) ===
+Pour les Clients:
+• Parcourir le catalogue par genre
+• Recherche de livres
+• Gestion du panier d'achat
+• Processus de commande simplifié
+• Historique des commandes
+
+Pour les Administrateurs:
+• Gestion complète des livres (CRUD)
+• Gestion des stocks
+• Suivi des commandes
+• Gestion des genres de livres
+
+=== Slide 4: Architecture Technique (2 min) ===
+• Technologies Utilisées:
+  - ASP.NET Core MVC (.NET 8)
+  - Entity Framework Core
+  - MySQL Database
+  - Bootstrap 5 pour l'interface
+  - Identity pour l'authentification
+
+• Architecture:
+  - Pattern MVC
+  - Repository Pattern
+  - Dependency Injection
+
+=== Slide 5: Interface Utilisateur (2 min) ===
+• Design Moderne et Responsive
+  - Palette de couleurs: #4F46E5 (Indigo) et #6B7280 (Gris)
+  - Interface adaptative sur tous les écrans
+• Navigation Intuitive
+  - Menu principal clair
+  - Filtres de recherche efficaces
+  - Panier d'achat accessible
+
+=== Slide 6: Démonstration en Direct (5 min) ===
+Scénario de Démonstration:
+1. Connexion utilisateur
+2. Parcours du catalogue
+3. Ajout de livres au panier
+4. Processus de commande
+5. Accès administrateur
+6. Gestion des livres et stocks
+
+=== Slide 7: Conclusion (30 sec) ===
+• Récapitulatif des points forts
+• Perspectives d'évolution
+• Questions et réponses
+

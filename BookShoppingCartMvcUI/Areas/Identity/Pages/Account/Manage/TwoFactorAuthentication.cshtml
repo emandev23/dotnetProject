@@ -6,65 +6,47 @@
     ViewData["ActivePage"] = ManageNavPages.TwoFactorAuthentication;
 }
 
-<partial name="_StatusMessage" for="StatusMessage" />
-<h3>@ViewData["Title"]</h3>
-@{
-    var consentFeature = HttpContext.Features.Get<ITrackingConsentFeature>();
-    @if (consentFeature?.CanTrack ?? true)
-    {
-        @if (Model.Is2faEnabled)
-        {
-            if (Model.RecoveryCodesLeft == 0)
-            {
-                <div class="alert alert-danger">
-                    <strong>You have no recovery codes left.</strong>
-                    <p>You must <a asp-page="./GenerateRecoveryCodes">generate a new set of recovery codes</a> before you can log in with a recovery code.</p>
-                </div>
-            }
-            else if (Model.RecoveryCodesLeft == 1)
-            {
-                <div class="alert alert-danger">
-                    <strong>You have 1 recovery code left.</strong>
-                    <p>You can <a asp-page="./GenerateRecoveryCodes">generate a new set of recovery codes</a>.</p>
-                </div>
-            }
-            else if (Model.RecoveryCodesLeft <= 3)
-            {
-                <div class="alert alert-warning">
-                    <strong>You have @Model.RecoveryCodesLeft recovery codes left.</strong>
-                    <p>You should <a asp-page="./GenerateRecoveryCodes">generate a new set of recovery codes</a>.</p>
-                </div>
-            }
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">@ViewData["Title"]</h3>
+                    
+                    <div class="alert alert-info" role="alert">
+                        <h4 class="alert-heading"><i class="bi bi-info-circle me-2"></i>Coming Soon!</h4>
+                        <p class="mb-0">Two-factor authentication (2FA) will be available in a future update to enhance your account security.</p>
+                    </div>
 
-            if (Model.IsMachineRemembered)
-            {
-                <form method="post" style="display: inline-block">
-                    <button type="submit" class="btn btn-primary">Forget this browser</button>
-                </form>
-            }
-            <a asp-page="./Disable2fa" class="btn btn-primary">Disable 2FA</a>
-            <a asp-page="./GenerateRecoveryCodes" class="btn btn-primary">Reset recovery codes</a>
-        }
+                    <div class="mt-4">
+                        <h5>What is Two-Factor Authentication?</h5>
+                        <p>Two-factor authentication is an extra layer of security used when logging in that requires not only a password but also a second form of verification, typically through:</p>
+                        <ul>
+                            <li>An authenticator app on your mobile device</li>
+                            <li>SMS text message verification</li>
+                            <li>Email verification codes</li>
+                        </ul>
+                    </div>
 
-        <h4>Authenticator app</h4>
-        @if (!Model.HasAuthenticator)
-        {
-            <a id="enable-authenticator" asp-page="./EnableAuthenticator" class="btn btn-primary">Add authenticator app</a>
-        }
-        else
-        {
-            <a id="enable-authenticator" asp-page="./EnableAuthenticator" class="btn btn-primary">Set up authenticator app</a>
-            <a id="reset-authenticator" asp-page="./ResetAuthenticator" class="btn btn-primary">Reset authenticator app</a>
-        }
-    }
-    else
-    {
-        <div class="alert alert-danger">
-            <strong>Privacy and cookie policy have not been accepted.</strong>
-            <p>You must accept the policy before you can enable two factor authentication.</p>
+                    <div class="mt-4">
+                        <h5>Benefits of 2FA</h5>
+                        <ul>
+                            <li>Enhanced account security</li>
+                            <li>Protection against unauthorized access</li>
+                            <li>Peace of mind for your sensitive information</li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-4">
+                        <div class="alert alert-secondary" role="alert">
+                            <i class="bi bi-clock-history me-2"></i>Stay tuned for updates! We're working on implementing this feature to better protect your account.
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    }
-}
+    </div>
+</div>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
